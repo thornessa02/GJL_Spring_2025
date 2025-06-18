@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NeighborPreferences : MonoBehaviour
 {
-    public string preferredGenre = "Lo-fi";
+    public TrackReader.MusicGenre preferredGenre = TrackReader.MusicGenre.LoFi;
     public float genreTolerance = 0.5f; // 1 = tolère tout, 0 = très difficile à satisfaire
 
     public float minPercussionDensity = 0.2f; // % de cases actives minimum
@@ -18,12 +18,10 @@ public class NeighborPreferences : MonoBehaviour
     public float preferredBPM = 90f;
     public float bpmTolerance = 10f;
 
-    public MixPreference mix = MixPreference.MelodyDominant;
-
-    public enum MixPreference { Balanced, PercussionDominant, MelodyDominant }
+    public TrackReader.MixPreference mix = TrackReader.MixPreference.MelodyDominant;
 
 
-    float ComputeSatisfaction(NeighborPreferences prefs, PlayerMusicData music)
+    float ComputeSatisfaction(NeighborPreferences prefs, TrackReader.PlayerMusicData music)
     {
         float score = 1f;
 
@@ -31,18 +29,18 @@ public class NeighborPreferences : MonoBehaviour
             score -= (1f - prefs.genreTolerance);
 
         float percDensity = music.GetPercussionDensity();
-        if (percDensity < prefs.minPercDensity || percDensity > prefs.maxPercDensity)
+        if (percDensity < prefs.minPercussionDensity || percDensity > prefs.maxPercussionDensity)
             score -= 0.2f;
 
         if (prefs.prefersKickOnBeat && !music.KickIsOnBeat())
             score -= 0.1f;
 
-        if (prefs.hatesSnareSpam && music.SnareTooFrequent())
+        if (prefs.hatesSnareOnEveryBeat && music.SnareTooFrequent())
             score -= 0.15f;
 
-        if (music.melodyA != prefs.preferredMelodyA)
+        if (music.melodyVariationA != prefs.preferredMelodyA)
             score -= 0.1f;
-        if (music.melodyB != prefs.preferredMelodyB)
+        if (music.melodyVariationB != prefs.preferredMelodyB)
             score -= 0.1f;
 
         if (Mathf.Abs(music.bpm - prefs.preferredBPM) > prefs.bpmTolerance)
