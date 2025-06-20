@@ -1170,6 +1170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixer: {fileID: 24100000, guid: bec0ac30195dc0e448191494fef43ae7, type: 2}
+  slider: {fileID: 7134859745358997320}
   mixerParameterName: Track4volume
 --- !u!1 &145407574
 GameObject:
@@ -3047,6 +3048,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixer: {fileID: 24100000, guid: bec0ac30195dc0e448191494fef43ae7, type: 2}
+  slider: {fileID: 7962643927796043842}
   mixerParameterName: Track5volume
 --- !u!1 &410087039
 GameObject:
@@ -3932,6 +3934,10 @@ MonoBehaviour:
   - {fileID: 193910513}
   - {fileID: 559124916}
   bpmSlider: {fileID: 0}
+  selectedKit: 0
+  selectedFX: 1
+  selectedMelody: 1
+  mixer: {fileID: 0}
 --- !u!114 &559124916 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 586293828635239901, guid: abc6fceaa8a6f724c94d961e4d12c032,
@@ -7535,6 +7541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixer: {fileID: 24100000, guid: bec0ac30195dc0e448191494fef43ae7, type: 2}
+  slider: {fileID: 6331314706589305028}
   mixerParameterName: Track1volume
 --- !u!1 &1642255248
 GameObject:
@@ -8035,6 +8042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixer: {fileID: 24100000, guid: bec0ac30195dc0e448191494fef43ae7, type: 2}
+  slider: {fileID: 7664567251868013774}
   mixerParameterName: Track2volume
 --- !u!1 &1742513046
 GameObject:
@@ -9012,6 +9020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixer: {fileID: 24100000, guid: bec0ac30195dc0e448191494fef43ae7, type: 2}
+  slider: {fileID: 8560048732463495542}
   mixerParameterName: Track3volume
 --- !u!1 &1999310333
 GameObject:
@@ -9375,6 +9384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixer: {fileID: 24100000, guid: bec0ac30195dc0e448191494fef43ae7, type: 2}
+  slider: {fileID: 0}
   mixerParameterName: Track1volume
 --- !u!114 &2120052322
 MonoBehaviour:
@@ -10405,6 +10415,7 @@ GameObject:
   m_Component:
   - component: {fileID: 543450651789424617}
   - component: {fileID: 919132147853077844}
+  - component: {fileID: 919132147853077845}
   m_Layer: 0
   m_Name: MixTable
   m_TagString: Untagged
@@ -10431,6 +10442,33 @@ MonoBehaviour:
   - {fileID: 142213687}
   - {fileID: 409015453}
   bpmSlider: {fileID: 7735792892074775476}
+  selectedKit: 0
+  selectedFX: 1
+  selectedMelody: 1
+  mixer: {fileID: 24100000, guid: bec0ac30195dc0e448191494fef43ae7, type: 2}
+--- !u!114 &919132147853077845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147853077843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6f61fc7b8c32164095ab0a089082086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  preferredGenre: 0
+  genreTolerance: 0.5
+  minPercussionDensity: 0.2
+  maxPercussionDensity: 0.6
+  prefersKickOnBeat: 1
+  hatesSnareOnEveryBeat: 1
+  preferredMelodyA: 2
+  preferredMelodyB: 1
+  preferredBPM: 90
+  bpmTolerance: 10
+  mix: 2
 --- !u!4 &964005396625721968
 Transform:
   m_ObjectHideFlags: 0
@@ -12877,7 +12915,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 919132147853077844}
+        m_TargetAssemblyTypeName: TrackReader, Assembly-CSharp
+        m_MethodName: UploadButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   toggle: 0
   linkedButton: []
   toggleOn: {fileID: 2100000, guid: ddf551fb64193ea4fa099bdcecc2b30a, type: 2}
@@ -15877,6 +15927,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 919132147853077844}
+        m_TargetAssemblyTypeName: TrackReader, Assembly-CSharp
+        m_MethodName: ChangeSekectedMelo
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   toggle: 0
   linkedButton:
   - {fileID: 6705279684321925529}
@@ -16218,6 +16280,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 919132147853077844}
+        m_TargetAssemblyTypeName: TrackReader, Assembly-CSharp
+        m_MethodName: ChangeSekectedMelo
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -17412,6 +17486,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 919132147853077844}
+        m_TargetAssemblyTypeName: TrackReader, Assembly-CSharp
+        m_MethodName: ChangeSelectedFX
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -18804,6 +18890,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 919132147853077844}
+        m_TargetAssemblyTypeName: TrackReader, Assembly-CSharp
+        m_MethodName: ChangeSekectedMelo
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   toggle: 0
   linkedButton:
   - {fileID: 6705279684321925529}
@@ -19768,6 +19866,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 919132147853077844}
+        m_TargetAssemblyTypeName: TrackReader, Assembly-CSharp
+        m_MethodName: ChangeSelectedFX
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   toggle: 0
   linkedButton:
   - {fileID: 7558759701818724608}
@@ -20662,6 +20772,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 919132147853077844}
+        m_TargetAssemblyTypeName: TrackReader, Assembly-CSharp
+        m_MethodName: ChangeSelectedFX
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

@@ -20,7 +20,15 @@ public class NeighborPreferences : MonoBehaviour
 
     public TrackReader.MixPreference mix = TrackReader.MixPreference.MelodyDominant;
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
 
+            print(ComputeSatisfaction(GetComponent<NeighborPreferences>(), GetComponent<TrackReader>().musicData));
+        }
+
+    }
     float ComputeSatisfaction(NeighborPreferences prefs, TrackReader.PlayerMusicData music)
     {
         float score = 1f;

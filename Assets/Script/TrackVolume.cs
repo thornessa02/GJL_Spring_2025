@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class TrackVolume : MonoBehaviour
 {
     [SerializeField] AudioMixer mixer;
-    PhysicalSlider slider;
+    public PhysicalSlider slider;
     [SerializeField] string mixerParameterName = "TrackVolume"; // Le nom exposé dans le mixer
     void Start()
     {

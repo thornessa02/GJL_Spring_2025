@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Track : MonoBehaviour
 {
-    [SerializeField] List<PhysicalButton> trackbeats;
+    public List<PhysicalButton> trackbeats;
     [SerializeField] bool loop;
     [SerializeField] Material highlight;
     [SerializeField] Material notHighlight;

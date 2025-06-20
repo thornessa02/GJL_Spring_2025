@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
+
 
 public class TrackReader : MonoBehaviour
 {
     
     public List<Track> tracks;
     [SerializeField] PhysicalSlider bpmSlider;
+    public MusicGenre selectedKit = MusicGenre.LoFi;
+    public int selectedFX = 1;
+    public int selectedMelody = 1;
     private void Start()
     {
         foreach (Track track in tracks)
@@ -40,6 +45,52 @@ public class TrackReader : MonoBehaviour
         }
         
     }
+
+    bool[] GetKicksInTrack(int index)
+    {
+        bool[] kicks = new bool[16];
+        for (int i = 0; i < 16; i++)
+        {
+            kicks[i] = tracks[index].trackbeats[i].toggle;
+        }
+        return kicks;
+    }
+
+    public void ChangeSekectedMelo(int i)
+    {
+        selectedMelody = i;
+    }
+    public void ChangeSelectedFX(int i)
+    {
+        selectedMelody = i;
+    }
+
+    public PlayerMusicData musicData = new PlayerMusicData();
+    public AudioMixer mixer;
+    public void UploadButton()
+    {
+        musicData.genre = selectedKit;
+        musicData.bpm = bpmSlider.value;
+
+        musicData.kickSteps = GetKicksInTrack(0);
+        musicData.snareSteps = GetKicksInTrack(1);
+        musicData.hatSteps = GetKicksInTrack(2);
+
+        musicData.melodyVariationA = selectedFX;
+        musicData.melodyVariationB = selectedMelody;
+
+        mixer.GetFloat("Track1volume", out float volume1);
+        musicData.volumeKick = volume1;
+        mixer.GetFloat("Track2volume", out float volume2);
+        musicData.volumeSnare = volume2;
+        mixer.GetFloat("Track3volume", out float volume3);
+        musicData.volumeHat = volume3;
+        mixer.GetFloat("Track4volume", out float volume4);
+        musicData.volumeMelodyA = volume4;
+        mixer.GetFloat("Track5volume", out float volume5);
+        musicData.volumeMelodyB = volume5;
+    }
+
 
     #region PlayerMusicData
     public enum MusicGenre
