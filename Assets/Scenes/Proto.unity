@@ -1017,6 +1017,7 @@ GameObject:
   - component: {fileID: 142213685}
   - component: {fileID: 142213687}
   - component: {fileID: 142213686}
+  - component: {fileID: 142213688}
   m_Layer: 0
   m_Name: Track4 - FX
   m_TagString: Untagged
@@ -1156,6 +1157,20 @@ MonoBehaviour:
   highlight: {fileID: 0}
   notHighlight: {fileID: 0}
   bpm: 0
+--- !u!114 &142213688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142213684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a90edef7d36d9284ba2c5318b3a1ae53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: bec0ac30195dc0e448191494fef43ae7, type: 2}
+  mixerParameterName: Track4volume
 --- !u!1 &145407574
 GameObject:
   m_ObjectHideFlags: 0
@@ -2879,6 +2894,7 @@ GameObject:
   - component: {fileID: 409015451}
   - component: {fileID: 409015453}
   - component: {fileID: 409015452}
+  - component: {fileID: 409015454}
   m_Layer: 0
   m_Name: Track5 - Melo
   m_TagString: Untagged
@@ -3018,6 +3034,20 @@ MonoBehaviour:
   highlight: {fileID: 0}
   notHighlight: {fileID: 0}
   bpm: 0
+--- !u!114 &409015454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409015450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a90edef7d36d9284ba2c5318b3a1ae53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: bec0ac30195dc0e448191494fef43ae7, type: 2}
+  mixerParameterName: Track5volume
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -7323,6 +7353,7 @@ GameObject:
   - component: {fileID: 1612625418}
   - component: {fileID: 1612625419}
   - component: {fileID: 1612625420}
+  - component: {fileID: 1612625421}
   m_Layer: 0
   m_Name: Track1 - Kick
   m_TagString: Untagged
@@ -7491,6 +7522,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1612625421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612625417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a90edef7d36d9284ba2c5318b3a1ae53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: bec0ac30195dc0e448191494fef43ae7, type: 2}
+  mixerParameterName: Track1volume
 --- !u!1 &1642255248
 GameObject:
   m_ObjectHideFlags: 0
@@ -7808,6 +7853,7 @@ GameObject:
   - component: {fileID: 1713313124}
   - component: {fileID: 1713313125}
   - component: {fileID: 1713313126}
+  - component: {fileID: 1713313127}
   m_Layer: 0
   m_Name: Track2 - Snare
   m_TagString: Untagged
@@ -7976,6 +8022,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1713313127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713313123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a90edef7d36d9284ba2c5318b3a1ae53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: bec0ac30195dc0e448191494fef43ae7, type: 2}
+  mixerParameterName: Track2volume
 --- !u!1 &1742513046
 GameObject:
   m_ObjectHideFlags: 0
@@ -8770,6 +8830,7 @@ GameObject:
   - component: {fileID: 1864799611}
   - component: {fileID: 1864799612}
   - component: {fileID: 1864799613}
+  - component: {fileID: 1864799614}
   m_Layer: 0
   m_Name: Track3 -Hi Hat
   m_TagString: Untagged
@@ -8938,6 +8999,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1864799614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864799610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a90edef7d36d9284ba2c5318b3a1ae53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: bec0ac30195dc0e448191494fef43ae7, type: 2}
+  mixerParameterName: Track3volume
 --- !u!1 &1999310333
 GameObject:
   m_ObjectHideFlags: 0
@@ -9950,8 +10025,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 533193074354950663}
-  - {fileID: 142213685}
-  - {fileID: 409015451}
   - {fileID: 8481858374453913196}
   - {fileID: 7738862724501821111}
   - {fileID: 4126137493156981134}
@@ -9970,6 +10043,8 @@ Transform:
   - {fileID: 1612625418}
   - {fileID: 1713313124}
   - {fileID: 1864799611}
+  - {fileID: 142213685}
+  - {fileID: 409015451}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!33 &601307018645714405
@@ -11488,7 +11563,7 @@ Transform:
   m_GameObject: {fileID: 2762197908256327219}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: 0, z: -2}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15511,7 +15586,7 @@ Transform:
   m_GameObject: {fileID: 3160292534625320726}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: 0, z: -6}
+  m_LocalPosition: {x: -0, y: 0, z: -2}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15533,7 +15608,8 @@ MonoBehaviour:
   minDistance: 6
   maxDistance: -2
   reader: {fileID: 0}
-  value: 0
+  volume: {fileID: 1612625421}
+  value: 5
 --- !u!65 &6331314706589305029
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16853,7 +16929,7 @@ Transform:
   m_GameObject: {fileID: 2077509246655076969}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: 0, z: -2}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16896,7 +16972,8 @@ MonoBehaviour:
   minDistance: 6
   maxDistance: -2
   reader: {fileID: 0}
-  value: 0
+  volume: {fileID: 142213688}
+  value: 5
 --- !u!1 &7188204713099384966
 GameObject:
   m_ObjectHideFlags: 0
@@ -17566,7 +17643,7 @@ Transform:
   m_GameObject: {fileID: 5320654454097510524}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: 0, z: -2}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17609,7 +17686,8 @@ MonoBehaviour:
   minDistance: 6
   maxDistance: -2
   reader: {fileID: 0}
-  value: 0
+  volume: {fileID: 1713313127}
+  value: 5
 --- !u!23 &7732174443471358442
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17761,6 +17839,7 @@ MonoBehaviour:
   minDistance: 15
   maxDistance: -12
   reader: {fileID: 919132147853077844}
+  volume: {fileID: 0}
   value: 120
 --- !u!65 &7735792892074775477
 BoxCollider:
@@ -18097,7 +18176,7 @@ Transform:
   m_GameObject: {fileID: 739976529035942671}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: 0, z: -2}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18440,7 +18519,8 @@ MonoBehaviour:
   minDistance: 6
   maxDistance: -2
   reader: {fileID: 0}
-  value: 0
+  volume: {fileID: 409015454}
+  value: 5
 --- !u!23 &7973201278882025057
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19581,7 +19661,8 @@ MonoBehaviour:
   minDistance: 6
   maxDistance: -2
   reader: {fileID: 0}
-  value: 0
+  volume: {fileID: 1864799614}
+  value: 5
 --- !u!33 &8595137728804185625
 MeshFilter:
   m_ObjectHideFlags: 0

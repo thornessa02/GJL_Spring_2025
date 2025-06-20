@@ -84,6 +84,14 @@ AudioMixerController:
   m_ExposedParameters:
   - guid: 8c8bb697e4e909e4684bd610f075a497
     name: Track1volume
+  - guid: 64330ea796d1fbf4a896aa7a1fd86e07
+    name: Track2volume
+  - guid: 6d30061b54cb38e45b29c35c8e4bb509
+    name: Track3volume
+  - guid: cef766e4e3a822640be66b91cc20180f
+    name: Track4volume
+  - guid: 521cc72e9044cc64984d7a8689015bca
+    name: Track5volume
   m_AudioMixerGroupViews:
   - guids:
     - 0116ac4e082162e4585400a8ee894dba

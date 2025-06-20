@@ -8,6 +8,7 @@ public class PhysicalSlider : MonoBehaviour
     [SerializeField] float minDistance;
     [SerializeField] float maxDistance;
     [SerializeField] TrackReader reader;
+    [SerializeField] TrackVolume volume;
     bool isSelected;
     Vector2 MouseDelta;
     public float value;
@@ -39,6 +40,9 @@ public class PhysicalSlider : MonoBehaviour
                 gameObject.transform.position += new Vector3(0, 0, MouseDelta.y);
                 if (transform.position.z < maxDistance) transform.position = new Vector3(transform.position.x,transform.position.y, maxDistance);
                 if (transform.position.z > minDistance) transform.position = new Vector3(transform.position.x,  transform.position.y, minDistance);
+
+                value = Remap(transform.position.z, 2f, -6f, 10f, 0f) - 5;
+                volume.OnSliderValueChanged(value);
             }   
         }
     }
