@@ -11,9 +11,13 @@ public class PhysicalButton : MonoBehaviour
     Animator anim;
     Renderer renderer;
     public bool toggle;
+    
+    [SerializeField] PhysicalButton[] linkedButton;
 
     [SerializeField] Material toggleOn;
     [SerializeField] Material toggleOff;
+    [SerializeField] Material highlighted;
+    
     private void Start()
     {
         renderer = GetComponent<Renderer>();
@@ -26,6 +30,26 @@ public class PhysicalButton : MonoBehaviour
         if (OnClick.GetPersistentEventCount() > 0)
         {
             OnClick.Invoke();
+
+            foreach (PhysicalButton button in linkedButton)
+            {
+                for (int i = 0; i < 3; i++)
+                {
+                    if (button.GetComponent<Renderer>().materials[i].name == "Highlight (Instance)")
+                    {
+                        button.ChangeColor(i, toggleOff);
+                    }
+                }
+            }
+
+            for(int i = 0; i < 3; i++)
+                {
+                if (renderer.materials[i].name == "ToggleOff (Instance)")
+                {
+                    ChangeColor(i, highlighted);
+                }
+            }
+
             return;
         }
 

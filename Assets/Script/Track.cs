@@ -34,6 +34,12 @@ public class Track : MonoBehaviour
     {
         if (!loop) StopAllCoroutines();
         else sound.Stop();
+
+        for (int i = 0; i < trackbeats.Count; i++)
+        {
+            if (i == 0) trackbeats[i].ChangeColor(2, notHighlight);
+            else trackbeats[i].ChangeColor(0, notHighlight);
+        }
     }
     IEnumerator PlayTrackKicks()
     {
