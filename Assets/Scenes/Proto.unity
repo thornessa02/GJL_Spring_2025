@@ -3901,7 +3901,7 @@ MonoBehaviour:
   - {fileID: 663353709}
   - {fileID: 193910513}
   - {fileID: 559124916}
-  bpmSlider: {fileID: 666565301}
+  bpmSlider: {fileID: 0}
 --- !u!114 &559124916 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 586293828635239901, guid: abc6fceaa8a6f724c94d961e4d12c032,
@@ -10355,7 +10355,7 @@ MonoBehaviour:
   - {fileID: 1864799612}
   - {fileID: 142213687}
   - {fileID: 409015453}
-  bpmSlider: {fileID: 666565301}
+  bpmSlider: {fileID: 7735792892074775476}
 --- !u!4 &964005396625721968
 Transform:
   m_ObjectHideFlags: 0
@@ -15532,6 +15532,8 @@ MonoBehaviour:
   horizontal: 0
   minDistance: 6
   maxDistance: -2
+  reader: {fileID: 0}
+  value: 0
 --- !u!65 &6331314706589305029
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16893,6 +16895,8 @@ MonoBehaviour:
   horizontal: 0
   minDistance: 6
   maxDistance: -2
+  reader: {fileID: 0}
+  value: 0
 --- !u!1 &7188204713099384966
 GameObject:
   m_ObjectHideFlags: 0
@@ -17604,6 +17608,8 @@ MonoBehaviour:
   horizontal: 0
   minDistance: 6
   maxDistance: -2
+  reader: {fileID: 0}
+  value: 0
 --- !u!23 &7732174443471358442
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17733,7 +17739,7 @@ Transform:
   m_GameObject: {fileID: 6411236491539861296}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 12, y: 0, z: 0}
+  m_LocalPosition: {x: 2.9, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17754,6 +17760,8 @@ MonoBehaviour:
   horizontal: 1
   minDistance: 15
   maxDistance: -12
+  reader: {fileID: 919132147853077844}
+  value: 120
 --- !u!65 &7735792892074775477
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18431,6 +18439,8 @@ MonoBehaviour:
   horizontal: 0
   minDistance: 6
   maxDistance: -2
+  reader: {fileID: 0}
+  value: 0
 --- !u!23 &7973201278882025057
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19570,6 +19580,8 @@ MonoBehaviour:
   horizontal: 0
   minDistance: 6
   maxDistance: -2
+  reader: {fileID: 0}
+  value: 0
 --- !u!33 &8595137728804185625
 MeshFilter:
   m_ObjectHideFlags: 0

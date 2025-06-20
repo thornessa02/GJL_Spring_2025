@@ -7,7 +7,7 @@ public class TrackReader : MonoBehaviour
 {
     
     public List<Track> tracks;
-    [SerializeField] Slider bpmSlider;
+    [SerializeField] PhysicalSlider bpmSlider;
     private void Start()
     {
         foreach (Track track in tracks)
