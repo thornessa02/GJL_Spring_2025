@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class Track : MonoBehaviour
 {
-    [SerializeField] List<Toggle> trackbeats;
+    [SerializeField] List<PhysicalButton> trackbeats;
     [SerializeField] bool loop;
+    [SerializeField] Material highlight;
+    [SerializeField] Material notHighlight;
     AudioSource sound;
     [HideInInspector] public float bpm;
     private void Start()
@@ -20,6 +22,7 @@ public class Track : MonoBehaviour
     }
     public void PlayTrack()
     {
+        StopTrack();
         if (!loop) StartCoroutine(PlayTrackKicks());
         else
         {
@@ -38,11 +41,17 @@ public class Track : MonoBehaviour
         {
             for (int i = 0; i < trackbeats.Count; i++)
             {
-                if (trackbeats[i].isOn)
+                if(i==0) trackbeats[i].ChangeColor(2, highlight);
+                else trackbeats[i].ChangeColor(0, highlight);
+
+                if (trackbeats[i].toggle)
                 {
                     sound.Play();
                 }
-                yield return new WaitForSeconds(1/(bpm/60));
+                yield return new WaitForSeconds((1/(bpm/60))/4);
+
+                if (i == 0) trackbeats[i].ChangeColor(2, notHighlight);
+                else trackbeats[i].ChangeColor(0, notHighlight);
             }
             yield return null;
             StartCoroutine(PlayTrackKicks());
