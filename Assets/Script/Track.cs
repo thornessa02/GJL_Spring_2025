@@ -11,14 +11,19 @@ public class Track : MonoBehaviour
     [SerializeField] Material notHighlight;
     AudioSource sound;
     [HideInInspector] public float bpm;
+    float baseBpm = 120f;
     private void Start()
     {
         sound = GetComponent<AudioSource>();
     }
     public void BPMChange()
     {
-        if (loop) ;
-        sound.pitch = bpm / 120;
+        if (loop) 
+        sound.pitch = bpm / baseBpm;
+    }
+    public void BaseBPMChange(int i)
+    {
+        baseBpm = i;
     }
     public void PlayTrack()
     {
@@ -27,7 +32,7 @@ public class Track : MonoBehaviour
         else
         {
             sound.Play();
-            sound.pitch = bpm / 120;
+            sound.pitch = bpm / baseBpm;
         }
     }
     public void StopTrack()

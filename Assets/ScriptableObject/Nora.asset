@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6f61fc7b8c32164095ab0a089082086, type: 3}
+  m_Name: Nora
+  m_EditorClassIdentifier: 
+  preferredGenre: 4
+  genreTolerance: 0.4
+  minPercussionDensity: 0.4
+  maxPercussionDensity: 0.8
+  prefersKickOnBeat: 1
+  hatesSnareOnEveryBeat: 0
+  preferredMelodyA: 1
+  preferredMelodyB: 1
+  preferredBPM: 105
+  bpmTolerance: 15
+  mix: 0
