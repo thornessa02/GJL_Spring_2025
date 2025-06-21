@@ -1708,8 +1708,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontal: 0
-  minDistance: 6
-  maxDistance: -2
+  minDistance: 2
+  maxDistance: -6
   reader: {fileID: 0}
   volume: {fileID: 1105565537370312676}
   value: 5
@@ -5382,8 +5382,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontal: 0
-  minDistance: 6
-  maxDistance: -2
+  minDistance: 2
+  maxDistance: -6
   reader: {fileID: 0}
   volume: {fileID: 4713193574423759093}
   value: 5
@@ -7102,8 +7102,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontal: 0
-  minDistance: 6
-  maxDistance: -2
+  minDistance: 2
+  maxDistance: -6
   reader: {fileID: 0}
   volume: {fileID: 7680572729693553261}
   value: 5
@@ -7871,8 +7871,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontal: 0
-  minDistance: 6
-  maxDistance: -2
+  minDistance: 2
+  maxDistance: -6
   reader: {fileID: 0}
   volume: {fileID: 2572612174988557013}
   value: 5
@@ -11533,8 +11533,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontal: 0
-  minDistance: 6
-  maxDistance: -2
+  minDistance: 2
+  maxDistance: -6
   reader: {fileID: 0}
   volume: {fileID: 6409591838877664839}
   value: 5
@@ -13008,8 +13008,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontal: 1
-  minDistance: 15
-  maxDistance: -12
+  minDistance: 12
+  maxDistance: -15
   reader: {fileID: 4125544614472656729}
   volume: {fileID: 0}
   value: 120

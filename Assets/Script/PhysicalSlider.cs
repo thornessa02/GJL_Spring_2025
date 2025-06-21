@@ -28,20 +28,20 @@ public class PhysicalSlider : MonoBehaviour
         {
             if (horizontal)
             {
-                transform.position += new Vector3(MouseDelta.x, 0, 0);
-                if (transform.position.x < maxDistance) transform.position = new Vector3(maxDistance, transform.position.y, transform.position.z);
-                if (transform.position.x > minDistance) transform.position = new Vector3(minDistance, transform.position.y, transform.position.z);
+                transform.localPosition -= new Vector3(MouseDelta.x, 0, 0);
+                if (transform.localPosition.x < maxDistance) transform.localPosition = new Vector3(maxDistance, transform.localPosition.y, transform.localPosition.z);
+                if (transform.localPosition.x > minDistance) transform.localPosition = new Vector3(minDistance, transform.localPosition.y, transform.localPosition.z);
 
-                value = Remap(transform.position.x, 12f, -15f, 240f, 60f)-20;
+                value = Remap(transform.localPosition.x, -12f, 15f, 240f, 60f)-20;
                 reader.OnSliderValueChanged(value);
             }
             else
             {
-                gameObject.transform.position += new Vector3(0, 0, MouseDelta.y);
-                if (transform.position.z < maxDistance) transform.position = new Vector3(transform.position.x,transform.position.y, maxDistance);
-                if (transform.position.z > minDistance) transform.position = new Vector3(transform.position.x,  transform.position.y, minDistance);
+                gameObject.transform.localPosition -= new Vector3(0, 0, MouseDelta.y);
+                if (transform.localPosition.z < maxDistance) transform.localPosition = new Vector3(transform.localPosition.x,transform.localPosition.y, maxDistance);
+                if (transform.localPosition.z > minDistance) transform.localPosition = new Vector3(transform.localPosition.x,  transform.localPosition.y, minDistance);
 
-                value = Remap(transform.position.z, 2f, -6f, 10f, 0f) - 5;
+                value = Remap(transform.localPosition.z, 6f, -2f, 10f, 0f) +15;
                 volume.OnSliderValueChanged(value);
             }   
         }
