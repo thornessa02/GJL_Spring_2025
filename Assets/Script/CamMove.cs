@@ -43,4 +43,15 @@ public class CamMove : MonoBehaviour
         t = Mathf.Clamp01(targetT);
         UpdateCameraTransform();
     }
+
+    public void SwapCam()
+    {
+        Transform oldA = pointA;
+        Transform oldB = pointB;
+
+        pointA = oldB;
+        pointB = oldA;
+
+        SetLerp(0);
+    }
 }

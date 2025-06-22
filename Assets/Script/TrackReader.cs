@@ -67,6 +67,7 @@ public class TrackReader : MonoBehaviour
 
     public PlayerMusicData musicData = new PlayerMusicData();
     public AudioMixer mixer;
+    public NeighborManager neighborManager;
     public void UploadButton()
     {
         musicData.genre = selectedKit;
@@ -89,6 +90,8 @@ public class TrackReader : MonoBehaviour
         musicData.volumeMelodyA = volume4;
         mixer.GetFloat("Track5volume", out float volume5);
         musicData.volumeMelodyB = volume5;
+
+        neighborManager.musicData = musicData;
     }
 
 

@@ -20,7 +20,7 @@ public class NeighborPreferences : ScriptableObject
 
     public TrackReader.MixPreference mix = TrackReader.MixPreference.MelodyDominant;
 
-    float ComputeSatisfaction(NeighborPreferences prefs, TrackReader.PlayerMusicData music)
+    public float ComputeSatisfaction(NeighborPreferences prefs, TrackReader.PlayerMusicData music)
     {
         float score = 1f;
 
