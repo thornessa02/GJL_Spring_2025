@@ -40,7 +40,7 @@ public class ScoreAnimator : MonoBehaviour
 
     void UpdateText()
     {
-        scoreText.text = displayedScore.ToString();
+        scoreText.text = "Score: " + displayedScore.ToString() +" /100";
     }
 
     void AnimateScale()

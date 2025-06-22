@@ -15,7 +15,7 @@ public class NeighborManager : MonoBehaviour
         {
             int randomIndex = Random.Range(0, neighborsArchetypes.Count - 1);
             NeighborPreferences archetypes = neighborsArchetypes[randomIndex];
-            //add archetype
+            neighbor.GetComponent<NeighborController>().preferences = archetypes;
             neighborsArchetypes.RemoveAt(randomIndex);
         }
     }
@@ -25,7 +25,7 @@ public class NeighborManager : MonoBehaviour
         float score = 0;
         foreach (GameObject neighbor in actualNeighbors)
         {
-            score += neighbor.GetComponent<NeighborPreferences>().ComputeSatisfaction(neighbor.GetComponent<NeighborPreferences>(),musicData);
+            score += neighbor.GetComponent<NeighborController>().preferences.ComputeSatisfaction(neighbor.GetComponent<NeighborController>().preferences, musicData);
         }
 
         score = score / actualNeighbors.Count;
@@ -39,6 +39,10 @@ public class NeighborManager : MonoBehaviour
     {
 
         score.AddScore(ComputeScore());
+        foreach (GameObject neighbor in actualNeighbors)
+        {
+            neighbor.GetComponent<NeighborController>().ChooseAnim(musicData);
+        }
     }
 
     public void Retry()

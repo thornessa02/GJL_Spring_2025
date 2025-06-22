@@ -68,6 +68,8 @@ public class TrackReader : MonoBehaviour
     public PlayerMusicData musicData = new PlayerMusicData();
     public AudioMixer mixer;
     public NeighborManager neighborManager;
+    public Camera cam;
+    public GameObject hud;
     public void UploadButton()
     {
         musicData.genre = selectedKit;
@@ -92,6 +94,10 @@ public class TrackReader : MonoBehaviour
         musicData.volumeMelodyB = volume5;
 
         neighborManager.musicData = musicData;
+        neighborManager.DisplayScore();
+        hud.SetActive(true);
+        cam.GetComponent<CamMove>().SwapCam();
+
     }
 
 
