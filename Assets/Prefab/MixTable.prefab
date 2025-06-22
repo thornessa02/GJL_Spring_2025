@@ -5113,6 +5113,62 @@ MonoBehaviour:
   toggleOn: {fileID: 2100000, guid: ddf551fb64193ea4fa099bdcecc2b30a, type: 2}
   toggleOff: {fileID: 2100000, guid: 62fa8986c206bde46bf6b915918cafe1, type: 2}
   highlighted: {fileID: 2100000, guid: ac95a276f42f5a04693f7a494f0a7ba1, type: 2}
+--- !u!1 &2411550704833565557
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4934283589767173829}
+  - component: {fileID: 3464038649566357632}
+  m_Layer: 0
+  m_Name: Decal Projector (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4934283589767173829
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2411550704833565557}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: -0.2426, y: 0.20699996, z: 0.021999989}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3665139983104747700}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &3464038649566357632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2411550704833565557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 28e0de78ea3251449b4c57ea1e83db7b, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 1
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 1, y: 1}
+  m_UVBias: {x: 0, y: 0}
+  m_DecalLayerMask: 4294967295
+  m_ScaleMode: 0
+  m_Offset: {x: 0, y: 0, z: 0.5}
+  m_Size: {x: 3.5, y: 3, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &2487684462776229863
 GameObject:
   m_ObjectHideFlags: 0
@@ -9756,7 +9812,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -5243988174349660497, guid: 6486ef661c591b0439656b8c874de4f1, type: 3}
+  - {fileID: -8519954859851933899, guid: 7d1f41ce3ebfc7c44ba3193fb72380be, type: 3}
   - {fileID: 2100000, guid: 6a0b04e2f1bc8b64ca8aaa967f27f07c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -11894,6 +11950,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 671037014727347651}
+  - {fileID: 4934283589767173829}
   m_Father: {fileID: 5075277814468577199}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2886500484210912805
@@ -12100,6 +12157,9 @@ MonoBehaviour:
   selectedFX: 1
   selectedMelody: 1
   mixer: {fileID: 24100000, guid: bec0ac30195dc0e448191494fef43ae7, type: 2}
+  neighborManager: {fileID: 0}
+  cam: {fileID: 0}
+  hud: {fileID: 0}
 --- !u!1 &8318276990152071329
 GameObject:
   m_ObjectHideFlags: 0
