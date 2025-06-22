@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class NeighborManager : MonoBehaviour
 {
-    List<NeighborPreferences> neighborsArchetypes;
-    List<GameObject> actualNeighbors;
+    public List<NeighborPreferences> neighborsArchetypes;
+    public List<GameObject> actualNeighbors;
 
     void Start()
     {
@@ -13,7 +13,8 @@ public class NeighborManager : MonoBehaviour
         {
             int randomIndex = Random.Range(0, neighborsArchetypes.Count - 1);
             NeighborPreferences archetypes = neighborsArchetypes[randomIndex];
-
+            //add archetype
+            neighborsArchetypes.RemoveAt(randomIndex);
         }
     }
 
